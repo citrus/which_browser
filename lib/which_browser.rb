@@ -1,18 +1,23 @@
 module WhichBrowser
 
+  def test_user_agent(regex)
+    self.env["HTTP_USER_AGENT"] && self.env["HTTP_USER_AGENT"].match(regex) != nil
+  end
+
+
   # =============================================
   # OS Methods
   
   def mac?
-     browser_test(/Macintosh/)
+     test_user_agent(/Macintosh/)
   end
   
   def pc?
-     browser_test(/Windows/)
+     test_user_agent(/Windows/)
   end
   
   def linux?
-     browser_test(/Linux/)
+     test_user_agent(/Linux/)
   end
   
   
@@ -20,19 +25,19 @@ module WhichBrowser
   # iOS Methods
     
   def mobile_safari?
-    browser_test(/(Mobile\/.+Safari)/)
+    test_user_agent(/Mobile\/.+Safari/)
   end
   
   def iphone?
-    mobile_safari? && browser_test(/iPhone/)
+    mobile_safari? && test_user_agent(/iPhone/)
   end
   
   def ipod?
-    mobile_safari? && browser_test(/iPod/)
+    mobile_safari? && test_user_agent(/iPod/)
   end
   
   def ipad?
-    mobile_safari? && browser_test(/iPad/)
+    mobile_safari? && test_user_agent(/iPad/)
   end
   
   
@@ -40,19 +45,19 @@ module WhichBrowser
   # Browsers
   
   def safari?
-    browser_test(/Safari/)
+    test_user_agent(/Safari/) && !mobile_safari?
   end
   
   def firefox?
-    browser_test(/Firefox/)
+    test_user_agent(/Firefox/)
   end
   
   def chrome?
-    browser_test(/Chrome/)
+    test_user_agent(/Chrome/)
   end
   
   def opera?
-    browser_test(/Opera/)
+    test_user_agent(/Opera/)
   end
   
   
@@ -60,18 +65,19 @@ module WhichBrowser
   # IE Methods
   
   def ie?
-    browser_test(/MSIE\s[5678]/)
+    test_user_agent(/MSIE\s[56789]/)
+  end
+  
+  def old_ie?
+    test_user_agent(/MSIE\s[56]/)
   end
   
   [5,6,7,8].each do |num|
     define_method "ie#{num}?" do
-      browser_test Regexp.new("MSIE\s#{num}")
+      test_user_agent Regexp.new("MSIE\s#{num}")
     end
   end
   
-  def browser_test(regex)
-    self.env["HTTP_USER_AGENT"] && self.env["HTTP_USER_AGENT"][regex]
-  end
 
 end
 
