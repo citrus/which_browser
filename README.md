@@ -1,5 +1,5 @@
 Which Browser
--------------
+=============
 
 Which Browser adds a few helper methods to a rack request so you can write cleaner browser-related logic.
 
@@ -32,6 +32,22 @@ Here's some other popular helpers:
     request.ipod?
     request.iphone?
     request.mobile_safari?
+
+
+
+Testing
+-------
+
+Shouda tests can be run with:
+
+    git clone git://github.com/citrus/which_browser.git
+    rake
+
+There is also a ramaze app in test/dummy for a demo, development and real-life testing. Install ramaze (`gem install ramaze`) if you don't have it, then run:
+
+    ruby test/dummy/app.rb 
+
+Now open your browser to [http://localhost:7000](http://localhost:7000)
 
 
 License
