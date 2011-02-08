@@ -18,6 +18,8 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   
   s.add_dependency('rack', '>= 1.0.1')
+  
 	s.add_development_dependency('shoulda', '>= 2.11.3')
+	s.add_development_dependency('ramaze',  '>= 2011.01.30')
 	
 end
