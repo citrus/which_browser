@@ -46,6 +46,7 @@ module WhichBrowser
   def firefox?
     test_user_agent(/Firefox/)
   end
+  alias :ff? :firefox? 
   
   def chrome?
     test_user_agent(/Chrome/)
