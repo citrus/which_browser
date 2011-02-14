@@ -20,7 +20,6 @@ Or in your rails controller, decide which layout:
     render :layout => request.mobile_safari? ? 'mobile' : 'application' 
 
 
-
 Here's some other popular helpers:
 
     request.ie?
@@ -41,6 +40,7 @@ Testing
 Shouda tests can be run with:
 
     git clone git://github.com/citrus/which_browser.git
+    cd which_browser
     rake
 
 There is also a ramaze app in test/dummy for a demo, development and real-life testing. Install ramaze (`gem install ramaze`) if you don't have it, then run:
