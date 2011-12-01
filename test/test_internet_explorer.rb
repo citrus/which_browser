@@ -1,6 +1,6 @@
 require_relative 'helper'
 	
-class TestInternetExplorer < Test::Unit::TestCase
+class TestInternetExplorer < MiniTest::Unit::TestCase
   
   # ie tests
   

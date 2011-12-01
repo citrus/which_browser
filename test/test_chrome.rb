@@ -1,6 +1,6 @@
 require_relative 'helper'
 	
-class TestChrome < Test::Unit::TestCase
+class TestChrome < MiniTest::Unit::TestCase
 
   # chrome tests
   

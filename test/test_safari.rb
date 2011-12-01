@@ -1,6 +1,6 @@
 require_relative 'helper'
 	
-class TestSafari < Test::Unit::TestCase
+class TestSafari < MiniTest::Unit::TestCase
 
   # safari tests
 

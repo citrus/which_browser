@@ -1,6 +1,6 @@
 require_relative 'helper'
 	
-class TestFirefox < Test::Unit::TestCase
+class TestFirefox < MiniTest::Unit::TestCase
 
   # firefox tests
   

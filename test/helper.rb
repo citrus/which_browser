@@ -1,9 +1,9 @@
 begin
   require 'rubygems'
   require 'bundler/setup'
-	require 'test/unit'
+	require 'minitest/autorun'
+	require 'minitest/should'
 	require 'rack'
-	require 'shoulda'
 	require 'which_browser'
 rescue LoadError => e
 	puts "Load error!"

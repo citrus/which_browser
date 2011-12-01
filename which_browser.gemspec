@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Spencer Steffen"]
   s.email       = ["spencer@citrusme.com"]
   s.homepage    = ""
-  s.summary     = %q{Which Browser adds a few helper methods to a rack request.}
-  s.description = %q{Which Browser adds a few helper methods to a rack request.}
+  s.summary     = %q{Which Browser adds a few helper methods to a rack request making it easier to determine which browser is being used by the client.}
+  s.description = %q{Which Browser adds a few helper methods to a rack request making it easier to determine which browser is being used by the client.}
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- test/*`.split("\n")
@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   
   s.add_dependency('rack', '>= 1.0.1')
   
-	s.add_development_dependency('shoulda', '>= 2.11.3')
-	s.add_development_dependency('ramaze',  '>= 2011.01.30')
+	s.add_development_dependency('rake',            '>= 0.8.7')
+	s.add_development_dependency('minitest_should', '>= 0.1.1')
 	
 end

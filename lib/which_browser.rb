@@ -74,6 +74,8 @@ module WhichBrowser
   end
   
     
+  
+    
   private
     
     def method_missing(method, *args, &block)
@@ -132,8 +134,8 @@ module WhichBrowser
     end
     
     def extract_version_with(regex)
-      v = (self.user_agent.match(regex) || [])[1].to_f
-      0 < v ? v : false      
+      v = self.user_agent.to_s.match(regex)[1].to_f rescue 0
+      0 < v ? v : false
     end
     
 end
