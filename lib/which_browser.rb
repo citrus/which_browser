@@ -15,6 +15,10 @@ module WhichBrowser
      test_user_agent(/Linux/)
   end
   
+  def mobile?
+     test_user_agent(/Mobile|webOS/)
+  end
+  
   
   # =============================================
   # iOS Methods

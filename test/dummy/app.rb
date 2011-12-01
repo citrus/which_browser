@@ -19,6 +19,7 @@ get "/" do
     :ie_gte6?, 
     :safari?, 
     :safari_version,
+    :mobile_safari?,
     :ff?, 
     :ff_version,
     :opera?,
@@ -26,7 +27,8 @@ get "/" do
     :chrome?,
     :pc?,
     :mac?,
-    :linux?
+    :linux?,
+    :mobile?
   ].collect{ |method|
     v = request.send(method)
     %(#{method} &nbsp; <span style="color: #{v == false ? 'red' : 'green' }; font-weight: #{v == false ? 'normal' : 'bold'}">#{v}</span>)
