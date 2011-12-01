@@ -1,6 +1,8 @@
 Which Browser
 =============
 
+### Check for user agents like a boss!
+
 Which Browser adds a few helper methods to a rack request so you can write cleaner browser-related logic.
 
 For example, the age old battle against IE 5 & 6 can be handled like so:
@@ -27,6 +29,7 @@ Here's some other popular helpers:
     request.ie_lt6?
     request.ie_gte7?
     
+    request.mobile?
     request.ipad?
     request.ipod?
     request.iphone?
@@ -37,20 +40,21 @@ Here's some other popular helpers:
 Testing
 -------
 
-Shouda tests can be run with:
+Tests can be run with:
 
     git clone git://github.com/citrus/which_browser.git
     cd which_browser
-    rake
+    bundle
+    bundle exec rake
 
-There is also a ramaze app in test/dummy for a demo, development and real-life testing. Install ramaze (`gem install ramaze`) if you don't have it, then run:
+There is also a sinatra app in test/dummy for a demo, development and real-life testing. Install sintra (`gem install sinatra`) if you don't have it, then run:
 
     ruby test/dummy/app.rb 
 
-Now open your browser to [http://localhost:7000](http://localhost:7000)
+Now open your browser to [http://localhost:4567](http://localhost:4567)
 
 
 License
 -------
 
-Copyright (c) 2011 Spencer Steffen, released under the New BSD License All rights reserved.
+Copyright (c) 2011 Spencer Steffen and Citrus, released under the New BSD License All rights reserved.
