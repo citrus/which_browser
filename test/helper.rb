@@ -1,15 +1,8 @@
-begin
-  require 'rubygems'
-  require 'bundler/setup'
-	require 'minitest/autorun'
-	require 'minitest/should'
-	require 'rack'
-	require 'which_browser'
-rescue LoadError => e
-	puts "Load error!"
-	puts e.inspect
-	exit
-end
+require 'rubygems'
+require 'minitest/autorun'
+require 'minitest/should'
+require 'rack'
+require 'which_browser'
 
 USER_AGENTS = {}
 
