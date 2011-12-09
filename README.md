@@ -47,7 +47,7 @@ As usual, just use the `gem install` command:
     
 Or add which_browser as a gem in your Gemfile:
 
-    gem 'which_browser', '>= 0.2.1' 
+    gem 'which_browser', '>= 0.2.2' 
 
 Then run `bundle install`
 
