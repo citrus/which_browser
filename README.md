@@ -35,6 +35,7 @@ Here's some other popular helpers:
     request.ipod?
     request.iphone?
     request.mobile_safari?
+    request.blackberry?
 
 
 Installation
@@ -46,7 +47,7 @@ As usual, just use the `gem install` command:
     
 Or add which_browser as a gem in your Gemfile:
 
-    gem 'which_browser', '>= 0.2.0' 
+    gem 'which_browser', '>= 0.2.1' 
 
 Then run `bundle install`
 
