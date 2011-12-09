@@ -16,7 +16,7 @@ module WhichBrowser
   end
   
   def mobile?
-     test_user_agent(/Mobile|webOS|Nokia|Symbian/)
+     test_user_agent(/Mobile|webOS|BlackBerry|Nokia|Symbian/)
   end
   
   
