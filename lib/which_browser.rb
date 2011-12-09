@@ -16,7 +16,7 @@ module WhichBrowser
   end
   
   def mobile?
-     test_user_agent(/Mobile|webOS/)
+     test_user_agent(/Mobile|webOS|Nokia|Symbian/)
   end
   
   
@@ -37,6 +37,17 @@ module WhichBrowser
   
   def ipad?
     mobile_safari? && test_user_agent(/iPad/)
+  end
+  
+  # =============================================
+  # Blackberry
+  
+  def blackberry?
+    test_user_agent(/BlackBerry/)
+  end
+  
+  def symbian?
+    test_user_agent(/Nokia|Symbian/)
   end
   
   
@@ -125,7 +136,7 @@ module WhichBrowser
           extract_version_with(/MSIE\s?([0-9\.]+)/)
         when 'safari'
           extract_version_with(/Version\/([0-9\.]+)\sSafari/)
-        when 'ios'
+        when 'ios', 'blackberry'
           extract_version_with(/Version\/([0-9\.]+)\sMobile/)
         when 'ff', 'firefox'
           extract_version_with(/Firefox\/([0-9\.]+)/)
