@@ -25,6 +25,14 @@ class TestMobile < MiniTest::Unit::TestCase
   	assert request.iphone?
   	assert request.mobile?
   end
+  
+  should "be safari iphone 4 and i0S 5" do
+  	request = get_request(:MobileSafari, 'iPhone 4')  	
+  	assert !request.safari?
+  	assert request.mobile_safari?
+  	assert request.iphone?
+  	assert request.mobile?
+  end
 
   should "be blackberry" do
   	request = get_request(:BlackBerry, '7.0.0.296')
