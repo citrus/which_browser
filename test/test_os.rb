@@ -1,6 +1,6 @@
 require File.expand_path('../helper', __FILE__)
 	
-class TestOS < MiniTest::Unit::TestCase
+class TestOS < MiniTest::Should::TestCase
   
   should "be on mac" do
   	request = get_request(:Chrome, '8.0.552.237')

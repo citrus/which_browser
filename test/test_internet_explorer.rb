@@ -1,6 +1,6 @@
 require File.expand_path('../helper', __FILE__)
 	
-class TestInternetExplorer < MiniTest::Unit::TestCase
+class TestInternetExplorer < MiniTest::Should::TestCase
   
   # ie tests
   

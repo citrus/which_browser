@@ -1,6 +1,6 @@
 require File.expand_path('../helper', __FILE__)
 	
-class TestChrome < MiniTest::Unit::TestCase
+class TestChrome < MiniTest::Should::TestCase
 
   # chrome tests
   

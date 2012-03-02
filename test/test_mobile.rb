@@ -1,6 +1,6 @@
 require File.expand_path('../helper', __FILE__)
 	
-class TestMobile < MiniTest::Unit::TestCase
+class TestMobile < MiniTest::Should::TestCase
   
   should "be safari ipad" do
   	request = get_request(:MobileSafari, 'iPad')

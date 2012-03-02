@@ -1,6 +1,6 @@
 require File.expand_path('../helper', __FILE__)
 	
-class TestSafari < MiniTest::Unit::TestCase
+class TestSafari < MiniTest::Should::TestCase
 
   should "be safari on mac" do
   	request = get_request(:Safari, '4.0.1')
