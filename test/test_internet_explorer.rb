@@ -23,7 +23,7 @@ class TestInternetExplorer < MiniTest::Should::TestCase
   should "be ie 7" do
   	request = get_request(:IE, '7.0b')  	
   	assert request.ie?
-  	assert !request.old_ie?
+  	assert request.old_ie?
   	assert request.ie7?
   	assert request.pc?
   end

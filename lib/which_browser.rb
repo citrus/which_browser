@@ -72,11 +72,11 @@ module WhichBrowser
   end
   
   def ie?
-    test_user_agent(/MSIE\s[56789]/)
+    test_user_agent(/MSIE/)
   end
   
   def old_ie?
-    test_user_agent(/MSIE\s[456]/)
+    test_user_agent(/MSIE\s[4567]/)
   end
   
   
