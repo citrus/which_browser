@@ -47,7 +47,7 @@ As usual, just use the `gem install` command:
     
 Or add which_browser as a gem in your Gemfile:
 
-    gem 'which_browser', '>= 0.2.2' 
+    gem 'which_browser', '>= 0.2.3' 
 
 Then run `bundle install`
 
@@ -73,4 +73,4 @@ Now open your browser to [http://localhost:4567](http://localhost:4567) and fidd
 License
 -------
 
-Copyright (c) 2011 Spencer Steffen and Citrus, released under the New BSD License All rights reserved.
+Copyright (c) 2013 Spencer Steffen and Citrus, released under the New BSD License All rights reserved.
